@@ -80,6 +80,34 @@ development session.  Perhaps the PID of your shell or your uid or
 the date (20090704, for example).
 
 
+=head1 EXAMPLE
+
+When you run a test with Test::Random you will see something like this:
+
+    perl some_test.t
+
+    1..3
+    ok 1
+    ok 2
+    ok 3
+    # TEST_RANDOM_SEED=20891494266
+
+If you wish to repeat the circumstances of that test, with the same
+randomly generated data, you can run it again with the
+C<<TEST_RANDOM_SEED>> environment variable set to the given seed.
+
+    TEST_RANDOM_SEED=20891494266 perl some_test.t
+
+    1..3
+    ok 1
+    ok 2
+    ok 3
+    # TEST_RANDOM_SEED=20891494266
+
+See your shell and operating system's documentation for details on how
+to set environment variables.
+
+
 =head1 CAVEATS
 
 If something in your code calls srand() all bets are off.
