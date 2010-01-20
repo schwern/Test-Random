@@ -2,6 +2,7 @@ package Test::Random;
 
 use strict;
 use warnings;
+use Config;
 
 our $VERSION = 20100119;
 
@@ -10,9 +11,12 @@ my $Seed = defined $ENV{TEST_RANDOM_SEED} ? $ENV{TEST_RANDOM_SEED} : _get_seed()
 # If something else calls srand() we're in trouble
 srand $Seed;
 
-# Yes, its not a great seed but it doesn't have to be secure.
 sub _get_seed {
-    return time ^ ( $$ * $< * $( );
+    # Get a random number from 0 to the biggest integer Perl can handle
+    my $intbits = $Config{ivsize} * 8;
+    my $maxint  = 2**($intbits-1);
+
+    return rand($maxint);
 }
 
 sub _display_seed {
