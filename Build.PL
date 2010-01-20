@@ -22,6 +22,9 @@ my $builder = MyBuild->new(
     },
 
     recursive_test_files => 1,
+
+    create_license      => 1,
+    create_readme       => 1,
 );
 
 $builder->create_build_script();
