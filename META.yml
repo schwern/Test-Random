@@ -1,5 +1,5 @@
 ---
-abstract: 'Make testing random functions easier'
+abstract: 'Make testing random functions deterministic'
 author:
   - 'Michael G Schwern <schwern@pobox.com>'
 build_requires:

@@ -14,3 +14,5 @@ t/no_plan_but_tests.t
 t/no_tests_no_seed.t
 t/note_seed_on_pass.t
 t/rand_check.plx
+README
+LICENSE
