@@ -40,7 +40,7 @@ __END__
 
 =head1 NAME
 
-Test::Random - Make testing random functions easier
+Test::Random - Make testing random functions deterministic
 
 =head1 SYNOPSIS
 
