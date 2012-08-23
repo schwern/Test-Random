@@ -22,7 +22,7 @@ sub _get_seed {
 sub _display_seed {
     my $tb = shift;
 
-    my $msg = "TEST_RANDOM_SEED=$Seed";
+    my $msg = sprintf "TEST_RANDOM_SEED=%d", $Seed;
     my $ok = _test_was_successful($tb);
     $ok ? $tb->note($msg) : $tb->diag($msg);
 
