@@ -1,3 +1,10 @@
+NEXT
+  Bug Fix
+  * Guarantee that TEST_RANDOM_SEED will display as an
+    integer and not scientific notation
+  * Adapt for Test::Builder 1.5 alpha 6.
+
+
 20100119.173355  Tue Jan 19 17:33:55 PST 2010
   Bug Fix
   * Improved the seed used by Test::Random
