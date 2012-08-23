@@ -22,18 +22,40 @@ sub _get_seed {
 sub _display_seed {
     my $tb = shift;
 
-    my $ok = $tb->summary && !( grep !$_, $tb->summary );
     my $msg = "TEST_RANDOM_SEED=$Seed";
+    my $ok = _test_was_successful($tb);
     $ok ? $tb->note($msg) : $tb->diag($msg);
 
     return;
+}
+
+sub _test_was_successful {
+    my $tb = shift;
+
+    if( $tb->can("history") ) {
+        return $tb->history->can_succeed;
+    }
+    else {
+        return $tb->is_passing;
+    }
+}
+
+sub _test_started {
+    my $tb = shift;
+
+    if( $tb->can("history") ) {
+        return $tb->history->test_start ? 1 : 0;
+    }
+    else {
+        return defined $tb->has_plan || $tb->summary;
+    }   
 }
 
 END {
     require Test::Builder;
     my $tb = Test::Builder->new;
 
-    if( defined $tb->has_plan or $tb->summary ) {
+    if( _test_started($tb) ) {
         _display_seed($tb);
     }
 }

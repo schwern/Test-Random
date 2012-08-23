@@ -29,6 +29,6 @@ pass("Passing test");
 
 END {
     $test->plan( tests => 2 );
-    $test->like( $output{tap}, qr/TEST_RANDOM_SEED/ );
-    $test->unlike( $output{err}, qr/TEST_RANDOM_SEED/ );
+    $test->unlike( $output{tap}, qr/TEST_RANDOM_SEED/ );
+    $test->like  ( $output{err}, qr/TEST_RANDOM_SEED/ );
 }
