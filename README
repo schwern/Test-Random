@@ -18,7 +18,7 @@ DESCRIPTION
     elements.
 
     You can control the random seed used by Test::Random by setting the
-    `TEST_RANDOM_SEED' environment variable. This is handy to make test runs
+    "TEST_RANDOM_SEED" environment variable. This is handy to make test runs
     repeatable.
 
         TEST_RANDOM_SEED=12345 perl -Ilib t/some_test.t
@@ -45,7 +45,7 @@ EXAMPLE
 
     If you wish to repeat the circumstances of that test, with the same
     randomly generated data, you can run it again with the
-    `<TEST_RANDOM_SEED'> environment variable set to the given seed.
+    "<TEST_RANDOM_SEED"> environment variable set to the given seed.
 
         TEST_RANDOM_SEED=20891494266 perl some_test.t
 

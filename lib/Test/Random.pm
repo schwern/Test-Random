@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Config;
 
-our $VERSION = '20100119.173355';
+our $VERSION = '20130414';
 
 my $Seed = defined $ENV{TEST_RANDOM_SEED} ? $ENV{TEST_RANDOM_SEED} : _get_seed();
 
