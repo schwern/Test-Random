@@ -33,7 +33,7 @@ sub _test_was_successful {
     my $tb = shift;
 
     if( $tb->can("history") ) {
-        return $tb->history->can_succeed;
+        return $tb->history->test_was_successful;
     }
     else {
         return $tb->is_passing;
