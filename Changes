@@ -1,3 +1,8 @@
+20130427  Sat Apr 27 19:52:10 PDT 2013
+  Test Fix
+  * Fix t/no_plan_but_tests.t for bug fix in Test::More 0.98_05.
+
+
 20130414  Sun Apr 14 11:14:00 BST 2013
   Bug Fix
   * Guarantee that TEST_RANDOM_SEED will display as an

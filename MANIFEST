@@ -7,6 +7,7 @@ lib/Test/Random.pm
 LICENSE
 MANIFEST			This list of files
 MANIFEST.SKIP
+META.json
 META.yml
 README
 t/control_rand.t
@@ -17,4 +18,3 @@ t/no_tests_no_seed.t
 t/note_seed_on_pass.t
 t/rand_check.plx
 t/seed_format.t
-META.json
