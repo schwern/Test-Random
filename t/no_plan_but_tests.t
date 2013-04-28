@@ -28,6 +28,7 @@ $tb->todo_output( \$output{todo} );
 pass("Passing test");
 
 END {
+    $? = 0;  # prevent the failing Test::More from exiting non-zero
     $test->plan( tests => 2 );
     $test->unlike( $output{tap}, qr/TEST_RANDOM_SEED/ );
     $test->like  ( $output{err}, qr/TEST_RANDOM_SEED/ );
